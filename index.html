@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSIHUBPT - Em Manutenção</title>
+    <style>
+        /* Reset básico e definições de estrutura */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Tipografia do sistema para carregar rápido e ser legível */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff; /* Fundo branco limpo */
+            color: #333333; /* Cinzento escuro para o texto (menos agressivo que preto puro) */
+            height: 100vh; /* Ocupa a altura total do ecrã */
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            text-align: center;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1em; /* Espaçamento entre letras para um look moderno */
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555555;
+        }
+
+        .highlight-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #000000;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 4px; /* Afasta o sublinhado do texto */
+            transition: opacity 0.2s ease;
+        }
+
+        .highlight-link:hover {
+            opacity: 0.6;
+        }
+
+        /* Ajuste para telemóveis */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.25rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>PSIHUBPT</h1>
+        <p>oops! parece que estamos a fazer arrumações.</p>
+        <p>
+            entretanto, que tal ver os próximos eventos no<br>
+            <a href="https://instagram.com/agendapsipt" class="highlight-link" target="_blank" rel="noopener noreferrer">instagram.com/agendapsipt</a> ?
+        </p>
+    </div>
+
+</body>
+</html>
+
