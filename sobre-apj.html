@@ -23,6 +23,31 @@
 	    .faq-pergunta:last-child { border-bottom: none; }
 	    #sidebar ol { list-style: decimal; margin-left: 1.2em; }
 	    #sidebar li { margin-bottom: 0.4em; }
+
+  /* Cria a classe para a lista */
+  .lista-links-simples {
+    list-style-type: none; /* Remove os pontos/bolinhas */
+    padding: 0;            /* Remove o recuo à esquerda */
+    margin: 0;             /* Remove margens extra da lista */
+  }
+
+  /* Define o espaço entre cada item (linha) da lista */
+  .lista-links-simples li {
+    margin-bottom: 5px; /* Ajusta este valor para mais ou menos espaço */
+  }
+
+  /* Opcional: Estilo para os links para garantir que ficam arrumados */
+  .lista-links-simples a {
+    text-decoration: none; /* Remove sublinhado (opcional) */
+    display: block;        /* Garante que o link ocupa a linha */
+  }
+  
+  /* Opcional: Efeito quando passas o rato por cima */
+  .lista-links-simples a:hover {
+    text-decoration: underline;
+  }
+		
+		
 		</style>
 	</head>
 	<body class="is-preload homepage">
@@ -95,13 +120,13 @@
 											<p>Esta informação NÃO é oficial. Foi compilada a partir de documentação pública, respostas da OPP a questões 
 												colocadas por email e experiências partilhadas pela comunidade. Antes de tomar qualquer decisão, consulta SEMPRE
 												os canais oficiais:</p>
-											<ol>
+											<ul class="lista-links-simples">
 												<li><a href="https://www.ordemdospsicologos.pt/" target="_blank">Site OPP</a></li>
 												<li><a href="https://www.ordemdospsicologos.pt/pt/estagios" target="_blank">Área Psicólogos Júnior</a></li>
 												<li><a href="https://www.ordemdospsicologos.pt/ficheiros/documentos/manual_psicaologo_jaonior_versaao_marco_2024.pdf" target="_blank">Manual do Psicólogo Júnior</a></li>
 												<li><a href="https://www.ordemdospsicologos.pt/pt/faq" target="_blank">FAQ oficial OPP</a></li>
 												<li><a href="https://www.ordemdospsicologos.pt/pt/cod_deontologico" target="_blank">Código Deontológico</a></li>
-											</ol>
+											</ul>
 										</section>
 
 										<section>
@@ -889,3 +914,4 @@
 	</body>
 
 </html>
+
