@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!-- saved from url=(0299)https://75479c9f-2a28-4746-ab5e-bdf3e1a9c9b7.claudeusercontent.com/v1/design/projects/75479c9f-2a28-4746-ab5e-bdf3e1a9c9b7/serve/em-construcao.html?t=014e51c3217aaa27840b76c4b24736853ada2204c3819d36860cf454525241a4.b614d23f-588b-4f26-a660-498cbaa9f346.c2372e12-14c1-4338-bb16-7dafddb0f746.1776885714 -->
+<html lang="pt"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style data-omelette-injected="">html,body{background:transparent}</style><script data-omelette-injected="">(()=>{var $=["https://claude.ai","https://preview.claude.ai","https://eap-omelette.claude.ai"];var F=30000;var A=3000;document.addEventListener("DOMContentLoaded",()=>{const Q="transform-react-jsx-source";document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((J,V)=>{const X=J.getAttribute("data-plugins")||"";if(X.indexOf(Q)<0){J.setAttribute("data-plugins",X?`${X},${Q}`:Q)}if(!J.hasAttribute("data-filename")){J.setAttribute("data-filename",J.getAttribute("src")||`inline-${V}`)}})});var W=window.parent;if(W&&W!==window){const Q=(z,k)=>{try{W.postMessage({__omelette_log:true,type:z,data:k},"*")}catch{}};["log","warn","error"].forEach((z)=>{const k=console[z];console[z]=(...C)=>{const D=C.map((w)=>{try{return typeof w==="object"?JSON.stringify(w):String(w)}catch{try{return String(w)}catch{return"[unstringifiable]"}}}).join(" ");Q(z,D);k.apply(console,C)}});window.addEventListener("error",(z)=>{const k=z.target;if(k&&k!==window&&k.tagName){const C=k.src||k.href||"";Q("resource_error",`${k.tagName} failed to load: ${C}`)}else{Q("error",`${z.message||"Unknown error"} at ${z.filename||"?"}:${z.lineno||0}:${z.colno||0}`)}},true);window.addEventListener("unhandledrejection",(z)=>{const k=z.reason;const C=k instanceof Error?`${k.message} ${k.stack}`:String(k);Q("error",`Unhandled rejection: ${C}`)});const J=()=>{try{W.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")J();else window.addEventListener("load",J);if(window.ResizeObserver)new ResizeObserver(J).observe(document.documentElement);const V={};let X=0;window.claude={complete(z){return new Promise((k,C)=>{if(!$.length){C(new Error("claude.complete: no parent origin"));return}const D=`c${++X}`;const w=()=>setTimeout(()=>{delete V[D];C(new Error(`claude.complete: no data for ${F/1000}s`))},F);const K=w();V[D]={resolve:k,reject:C,text:"",t:K,arm:w};try{for(const Z of $){W.postMessage({__om_api:true,id:D,body:z},Z)}}catch(Z){clearTimeout(K);delete V[D];C(Z)}})}};const Y={};let h=0;window.omelette={writeFile:(z,k)=>new Promise((C,D)=>{if(!$.length){C();return}const w=`f${++h}`;const K=setTimeout(()=>{delete Y[w];C()},A);Y[w]={resolve:C,reject:D,t:K};try{for(const Z of $){W.postMessage({__om_file:true,id:w,op:"write",path:z,content:k},Z)}}catch{clearTimeout(K);delete Y[w];C()}})};const b=(z)=>{try{return JSON.stringify(z)}catch{return JSON.stringify(String(z))}};window.addEventListener("message",(z)=>{if($.indexOf(z.origin)<0)return;if(z.source!==W)return;const k=z.data;if(!k)return;if(k.__om_file_r){const w=Y[k.id];if(!w)return;clearTimeout(w.t);delete Y[k.id];if(k.ok)w.resolve();else w.reject(new Error(k.error||"write failed"));return}if(k.__om_api_r){const w=V[k.id];if(!w)return;if(k.error!=null){clearTimeout(w.t);delete V[k.id];w.reject(new Error(k.error));return}if(k.chunk!=null){clearTimeout(w.t);w.t=w.arm();w.text+=k.chunk;return}if(k.done){clearTimeout(w.t);delete V[k.id];w.resolve(k.text!=null?k.text:w.text);return}return}if(!k.__om_eval)return;const C=k;const D=(w)=>{z.source.postMessage({...w,__om_eval_r:1,id:C.id},z.origin)};try{const w=(0,eval)(C.code);if(w&&typeof w.then==="function"){w.then((K)=>D({ok:1,v:b(K)}),(K)=>D({ok:0,e:String(K)}))}else{D({ok:1,v:b(w)})}}catch(w){D({ok:0,e:String(w)})}})}})();
+</script>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudámos de Casa! — PsiHubPT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Em construção — PsiHubPT_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       oklch(0.975 0.010 78);
+      --fg:       oklch(0.18  0.022 60);
+      --fg-muted: oklch(0.50  0.018 60);
+      --orange:   oklch(0.63  0.19  46);
+      --orange-lt:oklch(0.94  0.06  60);
+      --border:   oklch(0.88  0.012 75);
+      --serif:    'Playfair Display', Georgia, serif;
+      --sans:     'DM Sans', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ambient blobs */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, oklch(0.93 0.10 60 / 0.3), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: -150px; left: -150px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, oklch(0.90 0.06 55 / 0.18), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Card */
+    .card {
+      position: relative; z-index: 1;
+      max-width: 540px; width: 100%;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+      color: var(--fg-muted);
+    }
+    .logo span { color: var(--orange); }
+
+    /* Illustration */
+    .illustration {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 36px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    /* Text */
+    .headline {
+      font-family: var(--serif);
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .headline em {
+      font-style: italic;
+      color: var(--orange);
+    }
+
+    .body-text {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--fg-muted);
+      margin-bottom: 36px;
+    }
+
+    /* Actions */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      background: var(--fg);
+      color: var(--bg);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--orange); transform: translateY(-2px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--fg-muted);
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-1px); }
+
+    /* Footer note */
+    .footnote {
+      margin-top: 48px;
+      font-size: 12px;
+      color: var(--fg-muted);
+      opacity: 0.6;
+    }
+
+    /* Flip animação Casa/Cara */
+    .flip-wrap {
+  display: inline-block;
+  position: relative;
+  perspective: 300px;
+}
+
+.flip-s {
+  display: inline-block;
+  animation: flipOut 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.flip-r {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotateX(90deg);
+  animation: flipIn 4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes flipOut {
+  0%   { transform: rotateX(90deg); opacity: 0; }
+  10%  { transform: rotateX(0deg);  opacity: 1; }
+  40%  { transform: rotateX(0deg);  opacity: 1; }
+  50%  { transform: rotateX(90deg); opacity: 0; }
+  100% { transform: rotateX(90deg); opacity: 0; }
+}
+
+@keyframes flipIn {
+  0%   { transform: translateY(-50%) rotateX(90deg); opacity: 0; }
+  40%  { transform: translateY(-50%) rotateX(90deg); opacity: 0; }
+  50%  { transform: translateY(-50%) rotateX(0deg);  opacity: 1; }
+  90%  { transform: translateY(-50%) rotateX(0deg);  opacity: 1; }
+  100% { transform: translateY(-50%) rotateX(90deg); opacity: 0; }
+}
+
+.flip-s {
+  animation: flipOut 4s ease-in-out infinite;
+}
+
+.flip-r {
+  animation: flipIn 4s ease-in-out infinite;
+}
+
+  </style>
+<link href="./Em construção — PsiHubPT_files/css2(1)" rel="stylesheet"></head>
+<body inject_newvt_svd="true" inject_vt_svd="true">
+
+  <div class="card">
+
+    <div class="logo">Psi<span>Hub</span>PT</div>
+
+<h1 class="headline">
+  Mudámos de <em>Ca<span class="flip-wrap"><span class="flip-s">s</span><span class="flip-r">r</span></span>a.</em>
+</h1>
+
+    <p class="body-text">
+     Site novo com mais recursos, melhor navegação, e um design que já não parece preso em 2010. Tudo em
+    </p>
+
+    <div class="actions">
+      <a href="mailto:psihubpt@gmail.com" class="btn-primary">psihubpt.org</a>
+  
+    </div>
+
+    <p class="footnote">CC BY · 2026 &nbsp;<span style="font-family:&#39;Playfair Display&#39;,Georgia,serif;font-weight:700;letter-spacing:-0.02em;">Psi<span style="color:var(--orange)">Hub</span>PT</span> &nbsp;· <i>O portal é da cuprativa.</i></p>
+
+  </div>
+
+
+
+<div id="newvtPopupMenu" style="display: none;"></div><div id="vimeo_tool" class="vimeo_tool"><template shadowrootmode="open"><style>
+#vimeo_tool {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #3d3d3d;
+  font-family: Source Han Sans;
+  font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+line-height:normal;
+}
+
+#vimeo_tool.isOption{
+  background: linear-gradient(#fff, rgba(100, 170, 228, 0.2));
+}
+
+.priceImg {
+  width: 372px;
+  z-index: 99;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.priceImg .get {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 28px;
+  border-radius: 4px;
+  background-color: rgba(13, 189, 189, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  text-align: center;
+  font-family: Roboto;
+  cursor: pointer;
+  width: 67px;
+  bottom: 48px;
+  line-height: 28px;
+}
+
+.priceImg img {
+  width: 100%;
+}
+
+.priceImg .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(154, 154, 154, 1);
+}
+
+
+
+.pop {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 9999999;
+}
+
+.notice {
+  width: 360px;
+  text-align: center;
+  margin-bottom: 20px
+}
+
+.notice_in {
+  display: none;
+  height: 30px;
+  line-height: 30px;
+  background-color: #fbf6f6;
+  animation: fadenum 1s;
+  width: 470px;
+  margin: 0 auto 0 -40px;
+}
+
+.notice_in_svg {
+  float: left;
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+@keyframes fadenum {
+  0% {
+      transform: translateX(70px);
+  }
+}
+
+.dialog {
+  height: 560px;
+  width: 400px;
+  background-color: #fbf6f6;
+  padding-top: 0px;
+}
+
+.dialog_close {
+  margin-top: -102px;
+  margin-left: 380px;
+  position: absolute;
+}
+
+.dialog_in {
+  max-width: 320px;
+  flex: 1;
+  border: 1px solid #FD935A;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 15px;
+  padding-top: 20px;
+}
+
+.dialog_in:last-child {
+  margin-right: 0;
+}
+
+.dialog_in span.discount {
+  color: #B36BF4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #f9dfcf;
+  padding: 6px 0 6px 6px;
+  border-radius: 0 4px 0 6px;
+  font-size: 13px;
+}
+
+:root {
+  --titleHeight: 55px
+}
+
+.pro {
+  text-align: center;
+  height: var(--titleHeight);
+  line-height: var(--titleHeight);
+  color: #000;
+  font-weight: 450;
+  font-size: 28px;
+}
+
+.dialog_line {
+  border-bottom: 1px solid #ffc750;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.fee {
+  display: block;
+  text-align: center;
+  height: var(--titleHeight);
+  line-height: var(--titleHeight)
+}
+
+.fee>span:nth-child(1) {
+  font-size: 34px;
+  color: #444444;
+  font-weight: 500;
+  font-family: Source Han Sans;
+}
+
+#newsvd_dialog_in.Yearly .fee>span:nth-child(1){
+  color: #FD935A;
+}
+
+
+#newsvd_dialog_in.Yearly span.discount {
+  border-radius: 0 4px 0 100%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+}
+
+.fee>span:nth-child(2) {
+  color: #B6B5B5;
+    font-size: 14px;
+}
+
+.feature_list {
+  margin-left: 40px;
+  text-align: left;
+}
+
+.feature_list img.rightIcon{
+  margin-right: 7px;
+}
+
+.feature_list ul {
+  margin-left: -40px;
+  font-size: 14px
+}
+
+.feature_list ul li svg {
+  margin-left: -10px;
+  margin-right: 0px;
+  height: 13px;
+}
+
+.feature_list ul li {
+  line-height: 30px;
+  text-indent: -15px;
+  list-style: none;
+}
+
+.feature_list ul li::marker {
+  color: #00c0be;
+}
+
+.dialog_get {
+  cursor: pointer;
+  border: none;
+  display: block;
+  border-radius: 5px;
+  background-color: #00c0be;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  margin: 10px auto 5px;
+  font-weight: 600;
+  color: white
+}
+
+.newsvd_pro_sub {
+  border-radius: 999999px;
+  color: #FD935A;
+  box-sizing: border-box;
+  border: 1px solid #FD935A;
+  width: 80%;
+  text-align: center;
+  padding: 8px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-block;
+  transition: all .4s;
+  font-size: 14px;
+}
+
+#newsvd_dialog_in.Yearly .newsvd_pro_sub {
+  background: linear-gradient(180deg, #F1C946 0%, #FD935A 100%);
+  color: #fff;
+}
+
+#newsvd_dialog_in.Yearly .newsvd_pro_sub:hover{
+  opacity: .9;
+}
+
+span.newsvd_pro_sub:hover {
+  background: #FD935A;
+  color: #fff;
+}
+
+.dialog_close {
+  height: 20px;
+  width: 20px;
+  border-radius: 4em;
+}
+
+.dialog_close:hover {
+  background-color: #00c0be;
+}
+
+.external_ffmpeg {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#payment_popup {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.payment_content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 103;
+  height: 320px;
+  width: 410px;
+  background: #fff;
+  padding: 20px;
+}
+
+.payment_select {
+  padding: 20px 0 0 110px;
+}
+
+.payment_label {
+  line-height: 30px;
+}
+
+.original_price {
+  text-decoration: line-through;
+  color: red !important;
+}
+
+.chat_summary_block,
+.newsvd_chat_summary_block {
+  display: none;
+  position: absolute;
+  width: 250px;
+  margin-left: 65px;
+  height: 85px;
+  text-align: center !important;
+  background: white;
+}
+
+.summary_new {
+  height: 18px;
+  width: 18px;
+  margin-right: -3px;
+  margin-left: -6px;
+  float: left;
+  border-radius: 3px
+}
+
+.newsvd_summary_new {
+  height: 18px;
+  width: 18px;
+  margin-top: -4px;
+  margin-right: -3px;
+  margin-left: -5px;
+  float: left;
+  border-radius: 3px
+}
+
+.timerInput {
+  font-size: 16px;
+  display: inline-block;
+  margin: 10px 7% 0 0
+}
+
+.timeTip {
+  display: none;
+  position: absolute;
+  left: 23px;
+  border-radius: 5px;
+  width: 220px;
+  margin-top: -27px;
+  margin-left: -250px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center !important;
+  background: #0072e6;
+  color: white;
+}
+
+.timerInput p {
+  width: 77px;
+  height: 31px;
+  line-height: 31px;
+  border: 1px solid #9a999c;
+  border-radius: 4px;
+  color: #9a999c;
+  font-size: 14px;
+  text-align: center;
+  font-family: Roboto;
+  margin-top: 5px;
+}
+
+.spanTimer {
+  background: none;
+  outline: none;
+  padding: 0 !important;
+  width: 16px;
+  border: 0;
+  color: #9a999c !important;
+}
+
+.spanTimer:focus {
+  border: none;
+}
+
+.time_middle {
+  margin-left: -15px;
+  color: #9a999c;
+}
+
+.jump_to_chatGPT {
+  background: #0072e6 !important;
+  color: white;
+  outline: none;
+  font-size: 13px !important;
+  height: 27px !important;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px !important;
+  cursor: pointer;
+}
+
+.summary_position {
+  display: inline-block;
+  position: relative;
+  margin-left: -10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.summary_position img {
+  height: 20px;
+  width: 20px;
+}
+
+.summary_position:hover:after {
+  position: absolute;
+  left: -30px;
+  top: -25px;
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  color: #fff;
+  content: attr(labelTooltip);
+  white-space: nowrap;
+  z-index: 2;
+  width: 120px;
+}
+
+.summary_time_height {
+  height: 41px;
+}
+
+.other_options {
+  line-height: 20px !important;
+}
+
+.other_options_img {
+  height: 20px;
+  width: 20px;
+  float: right;
+}
+
+.newsvd_dialog {
+  background-color: #fff;
+  padding-top: 20px;
+  padding: 20px 34px;
+  position: relative;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #0000004d;
+  width: 80vw;
+  max-width: 940px;
+}
+
+.newsvd_dialog_close {
+  height: 20px;
+  width: 20px;
+  border-radius: 4em;
+  right: 6px;
+  top: 4px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.newsvd_dialog_close:hover {
+  background-color: #FD935A;
+}
+
+.top_pro_container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.top_pro {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #3d3d3d;
+}
+
+.top_pro_span {
+  font-size: 13px;
+  color: #9a999c;
+}
+
+.discountImg{
+  position: absolute;
+  width: 120px;
+  right: -60px;
+  top: -60px;
+}
+
+.perMon{
+  color: #A19F9F;
+  font-size: 15px;
+  text-align: center;
+  height: 18px;
+  line-height: 18px;
+}
+
+.hotTitle{
+  position: absolute;
+  width: 100%;
+  padding: 5px 0 5px 8px;
+  top: 0;
+  transform: translateY(-100%);
+  z-index: 0;
+  border-radius: 8px 8px 0 0;
+  opacity: 1;
+  background: rgba(179, 107, 244, 0.4);
+  font-size: 13px;
+  font-weight: 600;
+  color: #FD935A;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.cardLogo{
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  font-size: 14px;
+  color: #3D3D3D;
+}
+.cardLogo img{
+  width: 14px;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+/* 800px以下媒体查询 */
+@media screen and (max-width: 800px) {
+  .newsvd_dialog {
+      width: 90vw;
+  }
+
+  div#pop {
+      top: 0;
+      padding-top: 0;
+      transform: translateX(-50%) translateY(0);
+      overflow: auto;
+      max-height: calc(100vh - 40px);
+  }
+}</style><div><div id="vimeo_tool" class="" style="display: none;"><div id="pop" class="pop"><div id="newsvd_notice" class="notice"><div id="newsvd_notice_in" class="notice_in"><div class="notice_in_svg"><svg t="1669280615610" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2722" width="16" height="16" class="icon"><path d="M514.048 59.392q93.184 0 174.592 35.328t142.336 96.768 96.256 143.36 35.328 175.104-35.328 175.616-96.256 143.872-142.336 96.768-174.592 35.328-175.104-35.328-142.848-96.768-96.256-143.872-35.328-175.616 35.328-175.104 96.256-143.36 142.848-96.768 175.104-35.328zM795.648 423.936q18.432-18.432 19.456-45.568t-17.408-45.568-45.056-17.92-45.056 18.944l-288.768 288.768-99.328-98.304q-18.432-18.432-45.056-18.944t-45.056 17.92-18.944 43.52 17.92 43.52l142.336 143.36q18.432 18.432 48.128 17.92t48.128-18.944l-4.096 4.096z" p-id="2723" fill="#71b601"></path></svg></div><div id="newsvd_notice_in_span" class="notice_in_span"><span>We will support it soon! Click</span><span id="external_ffmpeg" class="external_ffmpeg">2k/4k</span><span>to download videos first.</span></div></div></div><div id="newsvd_dialog" class="newsvd_dialog"><div class="cardLogo"><span>Vimeo™ Downloader</span></div><div class="top_pro_container"><div class="top_pro">Plan</div><span class="top_pro_span">Subscription will automatically renew every month before you unsubscribe.</span></div><div id="newsvd_dialog_close" class="newsvd_dialog_close"><svg t="1669283546396" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4105" width="20" height="20" class="icon"><path d="M794.8 794.8c-14 14-36.9 14-50.9 0L229.2 280.1c-14-14-14-36.9 0-50.9s36.9-14 50.9 0L794.9 744c13.9 13.9 13.9 36.8-0.1 50.8z" p-id="4106" fill="#2c2c2c"></path><path d="M794.8 229.2c14 14 14 36.9 0 50.9L280.1 794.8c-14 14-36.9 14-50.9 0s-14-36.9 0-50.9L744 229.1c13.9-13.9 36.8-13.9 50.8 0.1z" p-id="4107" fill="#2c2c2c"></path></svg></div><div style="display: flex; justify-content: space-around;"><div id="newsvd_dialog_in" class="dialog_in Monthly"><!----><!----><div id="feature_explain" class="feature_explain"><span id="fee" class="fee"><span>$ 6.99</span><span> / month</span></span><div style="display: flex; justify-content: center;"><span pid="penndbmahnpapepljikkjmakcobdahne-monthly" class="newsvd_pro_sub">Upgrade</span></div><div id="feature_list" class="feature_list"><ul id="feature_list_ul"><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download videos with audio</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download 1000+ web</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>1-6x download speed</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download audio</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download subtitles</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Unlimited downloads</span></li></ul></div></div></div><div id="newsvd_dialog_in" class="dialog_in Quarterly"><span class="discount">Save 24%</span><!----><div id="feature_explain" class="feature_explain"><span id="fee" class="fee"><span>$ 15.99</span><span> / quarter</span></span><div style="display: flex; justify-content: center;"><span pid="penndbmahnpapepljikkjmakcobdahne-quarterly" class="newsvd_pro_sub">Upgrade</span></div><div id="feature_list" class="feature_list"><ul id="feature_list_ul"><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download videos with audio</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download 1000+ web</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>1-6x download speed</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download audio</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download subtitles</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Unlimited downloads</span></li></ul></div></div></div><div id="newsvd_dialog_in" class="dialog_in Yearly"><span class="discount">Save 52%</span><div class="hotTitle"> 🔥 Flash Sale </div><div id="feature_explain" class="feature_explain"><span id="fee" class="fee"><span>$ 39.99</span><span> / year</span></span><div style="display: flex; justify-content: center;"><span pid="penndbmahnpapepljikkjmakcobdahne-yearly" class="newsvd_pro_sub">Upgrade</span></div><div id="feature_list" class="feature_list"><ul id="feature_list_ul"><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download videos with audio</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download 1000+ web</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>1-6x download speed</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download audio</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Support download subtitles</span></li><li><img src="chrome-extension://penndbmahnpapepljikkjmakcobdahne/icons/right.png" alt="" class="rightIcon"><span>Unlimited downloads</span></li></ul></div></div></div></div><p style="text-align: center; font-size: 12px; color: rgb(121, 120, 120); margin: 10px 0px;"> Tip：Please refresh the page after the payment is successful </p></div></div></div></div></template></div><div id="vtPopupMenu" style="display: none;"></div></body><div><template shadowrootmode="closed"><div><main><div class="sc-1uwbbvd-0 cTwtgP"></div></main><style data-styled="active" data-styled-version="6.1.12"></style></div></template></div></html>
